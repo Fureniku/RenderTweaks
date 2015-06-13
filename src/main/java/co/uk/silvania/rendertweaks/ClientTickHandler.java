@@ -16,8 +16,8 @@ public class ClientTickHandler {
 	public void playerTickEvent(TickEvent.PlayerTickEvent event) {
 		if (event.side.equals(Side.CLIENT)) {
 			onTick();
-			RenderLiving.NAME_TAG_RANGE = RTConfig.nameRenderRange;
-			RenderLiving.NAME_TAG_RANGE_SNEAK = RTConfig.sneakingRenderRange;
+			RenderLiving.NAME_TAG_RANGE = 4.0F;
+			RenderLiving.NAME_TAG_RANGE_SNEAK = 1.0F;;
 		}
 	}
 	

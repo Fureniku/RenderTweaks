@@ -26,14 +26,9 @@ public class RenderTweaks {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		System.out.println("Registering Tick Handler");
-		if (RTConfig.alterEntityRender) {
-			FMLCommonHandler.instance().bus().register(new ClientTickHandler());
-		}
-		if (RTConfig.alterNameplates) {
-			RenderLiving.NAME_TAG_RANGE = RTConfig.nameRenderRange;
-			RenderLiving.NAME_TAG_RANGE_SNEAK = RTConfig.sneakingRenderRange;
-		}
+		FMLCommonHandler.instance().bus().register(new ClientTickHandler());
+		RenderLiving.NAME_TAG_RANGE = 4.0F;
+		RenderLiving.NAME_TAG_RANGE_SNEAK = 1.0F;
 	}
 	
 	public void applyRenderMultiplier(Entity entity) {
